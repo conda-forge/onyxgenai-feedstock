@@ -1,10 +1,6 @@
 {% set name = "onyxgenai" %}
-<<<<<<< Updated upstream
 {% set version = "1.0.4" %}
-=======
-{% set version = "1.0.3" %}
 {% set python_min = "3.10" %}
->>>>>>> Stashed changes
 
 package:
   name: {{ name|lower }}
