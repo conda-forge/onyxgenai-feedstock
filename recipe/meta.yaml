@@ -1,5 +1,10 @@
 {% set name = "onyxgenai" %}
+<<<<<<< Updated upstream
 {% set version = "1.0.4" %}
+=======
+{% set version = "1.0.3" %}
+{% set python_min = "3.10" %}
+>>>>>>> Stashed changes
 
 package:
   name: {{ name|lower }}
@@ -16,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - requests
     - spacy
     - PyPDF2
@@ -30,6 +35,7 @@ test:
   imports:
     - onyxgenai
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
